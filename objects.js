@@ -40,5 +40,71 @@ spaceship.numEngines = 8;
 delete spaceship['Secret Mission'];
 console.log(spaceship);
 
+// Methods
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
 
+// Write your code below
+const alienShip = {
+  retreat() {
+    console.log(retreatMessage);
+  } 
+}
+alienShip.retreat();
+
+// invoking multiple methods by commas
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+let takeOffMessage = 'Spim... Borp... Glix... Blastoff!';
+
+// Write your code below
+let alienShip = {
+  retreat() {
+    console.log(retreatMessage)
+  },
+  
+  takeOff() {
+  console.log(takeOffMessage)
+}
+};
+alienShip.retreat();
+alienShip.takeOff();
+
+// Nested Objects
+let spaceship = {
+  passengers: null,
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+      name: 'Sandra', 
+      degree: 'Computer Engineering', 
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    backup: {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  }
+}; 
+
+let capFave = spaceship.crew.captain['favorite foods'][0];
+console.log(capFave);
+spaceship.passengers = [
+  {name: 'Space Dog',
+  age: 32,
+  location: 'Watamu'}
+];
+let firstPassenger = spaceship.passengers[0].name;
+console.log(firstPassenger);
 
