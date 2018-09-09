@@ -108,3 +108,48 @@ spaceship.passengers = [
 let firstPassenger = spaceship.passengers[0].name;
 console.log(firstPassenger);
 
+// Pass By Reference
+
+let functionName = objectParam => {
+  objectParam['Property Name'] = 'New Property Value';
+};
+
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+// Write your code below
+
+let greenEnergy = objectParam => {
+  objectParam['Fuel Type'] = 'avocado oil';
+};
+
+let remotelyDisable = obj => {
+  obj['disabled'] = true;
+};
+
+// Pass by Reference
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+// Write your code below
+
+let greenEnergy = objectParam => {
+  objectParam['Fuel Type'] = 'avocado oil';
+};
+
+let remotelyDisable = obj => {
+  obj.disabled = true;
+};
+
+// calling the functions
+greenEnergy(spaceship);
+remotelyDisable(spaceship);
+
+console.log(spaceship);
+console.log(spaceship);
+
+
