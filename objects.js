@@ -39,3 +39,6 @@ spaceship.color = 'glorious gold';
 spaceship.numEngines = 8;
 delete spaceship['Secret Mission'];
 console.log(spaceship);
+
+
+
