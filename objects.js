@@ -152,4 +152,47 @@ remotelyDisable(spaceship);
 console.log(spaceship);
 console.log(spaceship);
 
+// Looping Through Objects
 
+let spaceship = {
+  crew: {
+  captain: { 
+      name: 'Lily', 
+      degree: 'Computer Engineering', 
+      cheerTeam() { console.log('You got this!') } 
+      },
+  'chief officer': { 
+      name: 'Dan', 
+      degree: 'Aerospace Engineering', 
+      agree() { console.log('I agree, captain!') } 
+      },
+  medic: { 
+      name: 'Clementine', 
+      degree: 'Physics', 
+      announce() { console.log(`Jets on!`) } },
+  translator: {
+      name: 'Shauna', 
+      degree: 'Conservation Science', 
+      powerFuel() { console.log('The tank is full!') } 
+      }
+  }
+}; 
+
+/* 1
+'[crew member's role]: [crew member's name]', e.g.,'chief officer: Dan'.
+
+
+*/
+for (let crewrole in spaceship.crew){
+console.log(`${crewrole}: ${spaceship.crew[crewrole].name}`)
+};
+
+// Write your code below
+/* 2
+'[crew member's name]: [crew member's degree]', i.e.,'Lily: Computer Engineering'.
+
+
+*/
+for(let acrew in spaceship.crew){
+  console.log(`'${spaceship.crew[acrew].name}: ${spaceship.crew[acrew].degree}'`)
+};
