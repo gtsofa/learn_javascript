@@ -252,4 +252,30 @@ robot.recharge();
 
 
 // Getters
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  get energyLevel(){
+    if(typeof this._energyLevel === 'number') {
+      return 'My current energy level is ' + this._energyLevel
+    } else {
+      return "System malfunction: cannot retrieve energy level"
+    }
+  }
+};
 
+console.log(robot.energyLevel);
+
+// Setters
+/**
+ * Example 
+ * const person = {
+  _age: 37,
+  set age(newAge){
+    if (typeof newAge === 'number'){
+      this._age = newAge;
+    } else {
+      console.log('You must assign a number to age');
+    }
+  }
+ */
