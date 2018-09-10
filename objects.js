@@ -196,3 +196,60 @@ console.log(`${crewrole}: ${spaceship.crew[crewrole].name}`)
 for(let acrew in spaceship.crew){
   console.log(`'${spaceship.crew[acrew].name}: ${spaceship.crew[acrew].degree}'`)
 };
+
+// ADVANCED OBJECTS
+/* The this keyword references the calling object which provides access to the calling object's properties*/
+
+
+/**
+ * add a property of model and assign to it a value of '1E78V2'. Add another property, energyLevel and assign to it a value of 100.
+ */
+
+const robot = {
+  model : '1E78V2',
+  energyLevel : 100,
+
+  provideInfo(){
+
+    
+    console.log('I am ' + this.model +'and my current energy level is' + this.energyLevel);
+}
+};
+robot.provideInfo();
+
+// Arrow Functions and this
+//NOTE: don't use this keyword when using arrow function
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy: () => {
+    console.log(`Energy is currently at ${this.energyLevel}%.`)
+  }
+}
+
+robot.checkEnergy();// prints undefined
+
+ // use a normal method to correct that error
+ const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`)
+  }
+}
+
+robot.checkEnergy();// prints correctly
+
+// Privacy
+const robot = {
+  _energyLevel: 100,
+  recharge(){
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+  }
+};
+robot._energyLevel = 'high';
+robot.recharge();
+
+
+// Getters
+
