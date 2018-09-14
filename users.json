@@ -1,0 +1,34 @@
+[
+    {
+        "username":"matteo", 
+        "email": "mat@stackoverflow.com",
+        "password": "mat123",
+        "confirm_password": "mat123"
+    },
+    {
+        "username":"shaffy", 
+        "email": "shaff@stackoverflow.com",
+        "password": "sha256",
+        "confirm_password": "sha256"
+    },
+    {
+        "username":"tesoro", 
+        "email": "tesoro@stackoverflow.com",
+        "password": "pass123",
+        "confirm_password": "pass123"
+    },
+    {
+        "username":"test1", 
+        "email": "test1@stackoverflow.com",
+        "password": "pas123",
+        "confirm_password": "pas123"
+    },
+
+    {
+        "username":"antonio", 
+        "email": "tonio@stackoverflow.com.com",
+        "password": "pasa123",
+        "confirm_password": "pasa123"
+
+    }
+]
